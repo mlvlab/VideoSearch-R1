@@ -1,0 +1,14 @@
+# This file is a fallback example. Dataset wrapper scripts generate a concrete
+# data_config under ${VIDEOSEARCH_OUTPUT_ROOT}/configs at runtime.
+
+ActivityNet-Oneturn_temporal:
+  anno_path: ${VIDEOSEARCH_DATA_ROOT}/activitynet/sft_data/train_oneturn.json
+  data_path: ${VIDEOSEARCH_DATA_ROOT}/activitynet/train/video_npy_with_meta
+
+Charades-Oneturn_temporal:
+  anno_path: ${VIDEOSEARCH_DATA_ROOT}/charades-sta/sft_data/train_oneturn.json
+  data_path: ${VIDEOSEARCH_DATA_ROOT}/charades-sta/train/video_npy_with_meta
+
+DiDeMo-Oneturn_temporal:
+  anno_path: ${VIDEOSEARCH_DATA_ROOT}/didemo/sft_data/train_oneturn.json
+  data_path: ${VIDEOSEARCH_DATA_ROOT}/didemo/train/video_npy_with_meta

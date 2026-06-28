@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "videosearch-r1"
+version = "0.1.0"
+description = "VideoSearch-R1 training, preprocessing, and temporal grounding evaluation code."
+requires-python = ">=3.11"
+readme = "README.md"
+
+[tool.setuptools.packages.find]
+include = ["videosearch_r1*"]

@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+_repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+source "${_repo_root}/scripts/common/env.bash"
+DATASET_ROOT="$(videosearch_dataset_dir activitynet)"
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PREPROCESS_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+ECCV_ROOT="$(cd "${PREPROCESS_ROOT}/.." && pwd)"
+
+COMMON_REPAIR_BASH="${COMMON_REPAIR_BASH:-${ECCV_ROOT}/analysis/text_grpo/preprocess/03_repair_grounding_append.bash}"
+GENERATOR_BASH="${GENERATOR_BASH:-${SCRIPT_DIR}/05_generate_match_grounding.bash}"
+
+DATASET_NAME="${DATASET_NAME:-activitynet}"
+GROUNDING_JSONL="${GROUNDING_JSONL:-${DATASET_ROOT}/sft_data/top1_reasoning_grounding.train.jsonl}"
+
+USE_FULL_TOP1_CANDIDATES="${USE_FULL_TOP1_CANDIDATES:-1}"
+FULL_TOP1_STRUCTURED_ROOT="${FULL_TOP1_STRUCTURED_ROOT:-${DATASET_ROOT}/train}"
+FULL_TOP1_POOL_JSONL="${FULL_TOP1_POOL_JSONL:-}"
+FULL_TOP1_FORCE_REBUILD="${FULL_TOP1_FORCE_REBUILD:-0}"
+
+# For original (non-append) grounding, query_update is not required.
+CHECK_MISSING_QUERY_UPDATE="${CHECK_MISSING_QUERY_UPDATE:-0}"
+GEN_POOL_ENV_KEY="POOL_JSONL"
+GEN_OUTPUT_ENV_KEY="OUTPUT_JSONL"
+GEN_SHARD_GPUS_ENV_KEY="SHARD_GPUS"
+
+if [[ ! -f "${COMMON_REPAIR_BASH}" ]]; then
+  echo "Missing COMMON_REPAIR_BASH: ${COMMON_REPAIR_BASH}" >&2
+  exit 1
+fi
+if [[ ! -f "${GENERATOR_BASH}" ]]; then
+  echo "Missing GENERATOR_BASH: ${GENERATOR_BASH}" >&2
+  exit 1
+fi
+
+env -u REPAIR_TOOL -u GENERATOR_BASH \
+  DATASET_NAME="${DATASET_NAME}" \
+  PREPROCESS_ROOT="${PREPROCESS_ROOT}" \
+  GENERATOR_BASH="${GENERATOR_BASH}" \
+  GEN_POOL_ENV_KEY="${GEN_POOL_ENV_KEY}" \
+  GEN_OUTPUT_ENV_KEY="${GEN_OUTPUT_ENV_KEY}" \
+  GEN_SHARD_GPUS_ENV_KEY="${GEN_SHARD_GPUS_ENV_KEY}" \
+  GROUNDING_JSONL="${GROUNDING_JSONL}" \
+  USE_FULL_TOP1_CANDIDATES="${USE_FULL_TOP1_CANDIDATES}" \
+  FULL_TOP1_STRUCTURED_ROOT="${FULL_TOP1_STRUCTURED_ROOT}" \
+  FULL_TOP1_POOL_JSONL="${FULL_TOP1_POOL_JSONL}" \
+  FULL_TOP1_FORCE_REBUILD="${FULL_TOP1_FORCE_REBUILD}" \
+  CHECK_MISSING_QUERY_UPDATE="${CHECK_MISSING_QUERY_UPDATE}" \
+  "${COMMON_REPAIR_BASH}" "$@"
