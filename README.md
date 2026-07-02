@@ -4,7 +4,7 @@
 
 <p>
   <a href="https://img.shields.io/badge/ECCV-2026-1a73e8"><img src="https://img.shields.io/badge/ECCV-2026-1a73e8?style=for-the-badge" alt="ECCV 2026"></a>
-  <a href="#"><img src="https://img.shields.io/badge/arXiv-coming%20soon-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv"></a>
+  <a href="https://arxiv.org/abs/2607.00446"><img src="https://img.shields.io/badge/arXiv-2607.00446-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv"></a>
   <a href="https://mlvlab.github.io/VideoSearch-R1/"><img src="https://img.shields.io/badge/%F0%9F%8C%90%20Project-Page-2b4f9e?style=for-the-badge" alt="Project Page"></a>
   <a href="https://huggingface.co/VideoSearchR1"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Data%20%26%20Models-ffce1c?style=for-the-badge" alt="Hugging Face"></a>
   <a href="LICENSE.txt"><img src="https://img.shields.io/badge/License-Apache%202.0-3da639?style=for-the-badge" alt="License"></a>
@@ -35,7 +35,7 @@
 - <img src="https://img.shields.io/badge/2026.06.22-18a058?style=flat-square" alt="2026.06.22"> Code released.
 - <img src="https://img.shields.io/badge/2026.06.22-f59e0b?style=flat-square" alt="2026.06.22"> Trained model checkpoints released.
 - <img src="https://img.shields.io/badge/2026.06.23-8b5cf6?style=flat-square" alt="2026.06.23"> Dataset released.
-- <img src="https://img.shields.io/badge/Paper%20Preprint-Coming%20Soon-b31b1b?style=flat-square" alt="Paper preprint coming soon"> Paper preprint coming soon.
+- <img src="https://img.shields.io/badge/2026.07.02-b31b1b?style=flat-square" alt="2026.07.02"> 📄 Paper preprint released on [arXiv](https://arxiv.org/abs/2607.00446).
 
 ## 🤖 For AI-Assisted Reproduction
 

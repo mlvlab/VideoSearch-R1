@@ -257,6 +257,13 @@
     /* misc */
     .mt40{margin-top:40px;}
     code.inl{background:var(--brand-l);color:var(--brand-dd);padding:1px 7px;border-radius:6px;font-family:'JetBrains Mono';font-size:.85em;}
+    .news-sec{padding:42px 0 46px;}
+    .newslist{list-style:none;padding:0;margin:16px auto 0;max-width:620px;}
+    .newslist li{display:flex;gap:14px;align-items:baseline;padding:11px 2px;border-bottom:1px solid var(--line);color:var(--muted);font-size:.99rem;line-height:1.55;}
+    .newslist li:last-child{border-bottom:none;}
+    .newslist .d{flex-shrink:0;min-width:98px;color:var(--brand-d);font-weight:700;font-size:.84rem;letter-spacing:.01em;}
+    .newslist b{color:var(--ink);font-weight:600;}
+    @media(max-width:720px){.newslist li{flex-direction:column;gap:2px;}.newslist .d{min-width:0;}}
 
     header.hero{position:relative;overflow:hidden;}
 
@@ -362,7 +369,7 @@
       <div class="notes"><span class="sup">&lowast;</span>&nbsp;Equal contribution&nbsp;&nbsp;&nbsp;<span class="sup">&dagger;</span>&nbsp;Corresponding author</div>
 
       <div class="buttons">
-        <button class="btn ghost" type="button" disabled aria-disabled="true" aria-label="arXiv — coming soon"><i class="fas fa-file-lines"></i> arXiv <span class="soon">soon</span></button>
+        <a class="btn" href="https://arxiv.org/abs/2607.00446" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> arXiv</a>
         <a class="btn" href="https://github.com/mlvlab/VideoSearch-R1" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
         <a class="btn" href="https://huggingface.co/VideoSearchR1" target="_blank" rel="noopener"><span class="emoji">&#129303;</span> Data &amp; Models</a>
       </div>
@@ -385,6 +392,19 @@
           <i>inter-video reasoning</i> (video retrieval) with <i>intra-video reasoning</i> (temporal grounding).
         </figcaption>
       </figure>
+    </div>
+  </section>
+
+  <!-- ======== NEWS ======== -->
+  <section id="news" class="news-sec">
+    <div class="wrap narrow">
+      <span class="eyebrow">News</span>
+      <ul class="newslist">
+        <li><span class="d">Jul 2, 2026</span> <span>Paper preprint is now on <a href="https://arxiv.org/abs/2607.00446" target="_blank" rel="noopener">arXiv</a>.</span></li>
+        <li><span class="d">Jun 23, 2026</span> <span>Dataset released on <a href="https://huggingface.co/VideoSearchR1" target="_blank" rel="noopener">Hugging Face</a>.</span></li>
+        <li><span class="d">Jun 22, 2026</span> <span>Code &amp; model checkpoints released.</span></li>
+        <li><span class="d">Jun 17, 2026</span> <span>Accepted to <b>ECCV 2026</b> &#127881;</span></li>
+      </ul>
     </div>
   </section>
 
