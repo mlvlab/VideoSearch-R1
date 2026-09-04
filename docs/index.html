@@ -163,7 +163,6 @@
     .fig-wide{max-width:1080px;margin-left:auto;margin-right:auto;}
     /* teaser: no card box, image placed directly */
     .teaser-fig img{width:100%;height:auto;display:block;border-radius:12px;box-shadow:var(--shadow);}
-    .teaser-fig figcaption{max-width:1000px;margin-left:auto;margin-right:auto;margin-top:18px;}
     .video-player{
       width:100%;height:auto;aspect-ratio:16/9;display:block;background:#000;
       border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-h);
@@ -386,9 +385,6 @@
   <!-- ======== VIDEO ======== -->
   <section class="video-sec" id="video">
     <div class="wrap">
-      <span class="eyebrow">Teaser Video</span>
-      <h2 class="section-title">VideoSearch-R1 in 140 seconds</h2>
-      <p class="section-sub">A concise visual overview of iterative video retrieval, reasoning, and Soft Query Refinement.</p>
       <video class="video-player" controls playsinline preload="metadata" poster="static/figures/teaser_poster.jpg" aria-label="VideoSearch-R1 teaser video">
         <source src="static/videos/videosearch-r1-teaser.mp4" type="video/mp4">
         Your browser does not support embedded video. <a href="static/videos/videosearch-r1-teaser.mp4">Watch the teaser video directly.</a>
@@ -403,14 +399,6 @@
         <a class="zoom" href="static/figures/fig1_teaser.png" target="_blank" rel="noopener">
           <img src="static/figures/fig1_teaser.png" alt="VideoSearch-R1 multi-turn interaction: a query is verified against a retrieved video, refined via Soft Query Refinement, and re-retrieved at rank 1 for temporal grounding.">
         </a>
-        <figcaption>
-          <b>An illustrative example of VideoSearch-R1.</b> As an agentic AI system, VideoSearch-R1 enables
-          multi-turn interaction through iterative video retrieval and reasoning, leveraging an external video
-          search engine. At <i>Turn&nbsp;1</i> the ground-truth video is ranked 14<sup>th</sup>; after verifying the
-          mismatch and applying <b>Soft Query Refinement</b>, the engine retrieves it at <b>rank&nbsp;1</b> in
-          <i>Turn&nbsp;2</i>, where the model then performs temporal grounding. This pipeline unifies corpus-level
-          <i>inter-video reasoning</i> (video retrieval) with <i>intra-video reasoning</i> (temporal grounding).
-        </figcaption>
       </figure>
     </div>
   </section>
