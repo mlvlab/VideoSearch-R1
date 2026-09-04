@@ -137,7 +137,6 @@
     section{padding:66px 0;}
     section[id]{scroll-margin-top:70px;}
     .video-sec{padding-top:28px;padding-bottom:48px;}
-    .teaser-sec{padding-top:14px;padding-bottom:48px;}
     section.alt{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
     .eyebrow{
       display:block;text-align:center;color:var(--brand);font-weight:700;
@@ -161,8 +160,6 @@
     figcaption{font-size:.93rem;color:var(--muted);margin-top:16px;line-height:1.6;}
     figcaption b{color:var(--ink);}
     .fig-wide{max-width:1080px;margin-left:auto;margin-right:auto;}
-    /* teaser: no card box, image placed directly */
-    .teaser-fig img{width:100%;height:auto;display:block;border-radius:12px;box-shadow:var(--shadow);}
     .video-player{
       width:100%;height:auto;aspect-ratio:16/9;display:block;background:#000;
       border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-h);
@@ -386,20 +383,9 @@
   <section class="video-sec" id="video">
     <div class="wrap">
       <video class="video-player" controls playsinline preload="metadata" poster="static/figures/teaser_poster.jpg" aria-label="VideoSearch-R1 teaser video">
-        <source src="static/videos/videosearch-r1-teaser.mp4" type="video/mp4">
-        Your browser does not support embedded video. <a href="static/videos/videosearch-r1-teaser.mp4">Watch the teaser video directly.</a>
+        <source src="static/videos/videosearch-r1-teaser.mp4?v=1440p" type="video/mp4">
+        Your browser does not support embedded video. <a href="static/videos/videosearch-r1-teaser.mp4?v=1440p">Watch the teaser video directly.</a>
       </video>
-    </div>
-  </section>
-
-  <!-- ======== TEASER ======== -->
-  <section class="teaser-sec">
-    <div class="wrap">
-      <figure class="fig-wide teaser-fig">
-        <a class="zoom" href="static/figures/fig1_teaser.png" target="_blank" rel="noopener">
-          <img src="static/figures/fig1_teaser.png" alt="VideoSearch-R1 multi-turn interaction: a query is verified against a retrieved video, refined via Soft Query Refinement, and re-retrieved at rank 1 for temporal grounding.">
-        </a>
-      </figure>
     </div>
   </section>
 

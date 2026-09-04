@@ -28,7 +28,7 @@
 <p>
   <a href="https://mlvlab.github.io/VideoSearch-R1/#video"><strong>▶ Watch the full teaser video (2:20)</strong></a>
   &nbsp;·&nbsp;
-  <a href="https://mlvlab.github.io/VideoSearch-R1/static/videos/videosearch-r1-teaser.mp4">Direct MP4</a>
+  <a href="https://mlvlab.github.io/VideoSearch-R1/static/videos/videosearch-r1-teaser.mp4?v=1440p">Direct MP4</a>
 </p>
 
 </div>
