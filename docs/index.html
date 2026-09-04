@@ -81,7 +81,7 @@
     .navlinks{display:flex;gap:22px;font-size:.93rem;font-weight:500;}
     .navlinks a{color:var(--muted);}
     .navlinks a:hover{color:var(--brand);text-decoration:none;}
-    @media(max-width:720px){.navlinks{display:none;}}
+    @media(max-width:780px){.navlinks{display:none;}}
 
     /* ---------- hero ---------- */
     header.hero{
@@ -135,6 +135,8 @@
 
     /* ---------- sections ---------- */
     section{padding:66px 0;}
+    section[id]{scroll-margin-top:70px;}
+    .video-sec{padding-top:28px;padding-bottom:48px;}
     .teaser-sec{padding-top:14px;padding-bottom:48px;}
     section.alt{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
     .eyebrow{
@@ -162,6 +164,10 @@
     /* teaser: no card box, image placed directly */
     .teaser-fig img{width:100%;height:auto;display:block;border-radius:12px;box-shadow:var(--shadow);}
     .teaser-fig figcaption{max-width:1000px;margin-left:auto;margin-right:auto;margin-top:18px;}
+    .video-player{
+      width:100%;height:auto;aspect-ratio:16/9;display:block;background:#000;
+      border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-h);
+    }
     a.zoom{display:block;position:relative;}
     a.zoom::after{
       content:"\f00e";font-family:"Font Awesome 6 Free";font-weight:900;
@@ -334,6 +340,7 @@
       </div>
       <div class="nav-right">
         <div class="navlinks">
+          <a href="#video">Video</a>
           <a href="#abstract">Abstract</a>
           <a href="#method">Method</a>
           <a href="#results">Results</a>
@@ -375,6 +382,19 @@
       </div>
     </div>
   </header>
+
+  <!-- ======== VIDEO ======== -->
+  <section class="video-sec" id="video">
+    <div class="wrap">
+      <span class="eyebrow">Teaser Video</span>
+      <h2 class="section-title">VideoSearch-R1 in 140 seconds</h2>
+      <p class="section-sub">A concise visual overview of iterative video retrieval, reasoning, and Soft Query Refinement.</p>
+      <video class="video-player" controls playsinline preload="metadata" poster="static/figures/teaser_poster.jpg" aria-label="VideoSearch-R1 teaser video">
+        <source src="static/videos/videosearch-r1-teaser.mp4" type="video/mp4">
+        Your browser does not support embedded video. <a href="static/videos/videosearch-r1-teaser.mp4">Watch the teaser video directly.</a>
+      </video>
+    </div>
+  </section>
 
   <!-- ======== TEASER ======== -->
   <section class="teaser-sec">

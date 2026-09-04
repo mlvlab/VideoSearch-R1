@@ -21,7 +21,15 @@
 
 <br>
 
-<img src="docs/static/figures/fig1_teaser.png" width="95%" alt="VideoSearch-R1 teaser">
+<a href="https://mlvlab.github.io/VideoSearch-R1/#video">
+  <img src="docs/static/figures/teaser_preview.gif" width="95%" alt="Animated preview of the VideoSearch-R1 teaser video">
+</a>
+
+<p>
+  <a href="https://mlvlab.github.io/VideoSearch-R1/#video"><strong>▶ Watch the full teaser video (2:20)</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://mlvlab.github.io/VideoSearch-R1/static/videos/videosearch-r1-teaser.mp4">Direct MP4</a>
+</p>
 
 </div>
 
